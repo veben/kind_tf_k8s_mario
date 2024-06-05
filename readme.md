@@ -2,8 +2,10 @@
 This repository provides instructions for setting up a local Kubernetes cluster using **Kind** (Kubernetes IN Docker) and deploying the Mario bros game on it.
 
 ## 1. ⚙ Prerequisites
-> These steps are required if you want to use kind on WSL
+### Tools
+**Docker**, installed in your machine
 
+### (optional) WSL configured
 - Update WSL to last version:
 ```sh
 wsl --list --verbose
@@ -64,7 +66,7 @@ kubectl port-forward service/mario-service 8080:80
 ## 5. 🧪 Testing the game
 Open a web browser and visit `http://localhost:8080` to access the Mario game.
 
-## 6. 🚿 Cleaning
+## 6. 🚿 Cleaning up
 - Destroy the `deployment` and the `service` resources:
 ```sh
 kubectl delete service mario-service
